@@ -13,6 +13,8 @@
 		40B92E9E2A27E75700FBAE64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B92E9C2A27E75700FBAE64 /* Main.storyboard */; };
 		40B92EA02A27E75900FBAE64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B92E9F2A27E75900FBAE64 /* Assets.xcassets */; };
 		40B92EA32A27E75900FBAE64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B92EA12A27E75900FBAE64 /* LaunchScreen.storyboard */; };
+		40B92EB22A293C2A00FBAE64 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92EB12A293C2A00FBAE64 /* CustomTextField.swift */; };
+		40B92EB42A293C5800FBAE64 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B92EB32A293C5800FBAE64 /* CustomTextField.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		40B92E9F2A27E75900FBAE64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40B92EA22A27E75900FBAE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40B92EA42A27E75900FBAE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40B92EB12A293C2A00FBAE64 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		40B92EB32A293C5800FBAE64 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				40B92E9C2A27E75700FBAE64 /* Main.storyboard */,
+				40B92EB32A293C5800FBAE64 /* CustomTextField.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				40B92E9A2A27E75700FBAE64 /* TextFieldsViewController.swift */,
+				40B92EB12A293C2A00FBAE64 /* CustomTextField.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B92EB42A293C5800FBAE64 /* CustomTextField.xib in Resources */,
 				40B92EA32A27E75900FBAE64 /* LaunchScreen.storyboard in Resources */,
 				40B92EA02A27E75900FBAE64 /* Assets.xcassets in Resources */,
 				40B92E9E2A27E75700FBAE64 /* Main.storyboard in Resources */,
@@ -162,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B92EB22A293C2A00FBAE64 /* CustomTextField.swift in Sources */,
 				40B92E9B2A27E75700FBAE64 /* TextFieldsViewController.swift in Sources */,
 				40B92E972A27E75700FBAE64 /* AppDelegate.swift in Sources */,
 				40B92E992A27E75700FBAE64 /* SceneDelegate.swift in Sources */,

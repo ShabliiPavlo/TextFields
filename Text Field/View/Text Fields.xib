@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextLogik" customModule="Text_Field" customModuleProvider="target">
+            <connections>
+                <outlet property="customView" destination="iN0-l3-epB" id="aQw-zH-BsX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i08-vF-kSx">
+                    <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="3d2-yr-3qb"/>
+                        <constraint firstAttribute="width" constant="361" id="Q19-os-0KA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7hZ-1M-ldB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="i08-vF-kSx" firstAttribute="leading" secondItem="7hZ-1M-ldB" secondAttribute="leading" id="13U-6S-fv4"/>
+                <constraint firstItem="i08-vF-kSx" firstAttribute="trailing" secondItem="7hZ-1M-ldB" secondAttribute="trailing" id="A8m-6o-41Y"/>
+                <constraint firstItem="i08-vF-kSx" firstAttribute="top" secondItem="7hZ-1M-ldB" secondAttribute="top" id="EM6-ns-CCA"/>
+                <constraint firstItem="7hZ-1M-ldB" firstAttribute="bottom" secondItem="i08-vF-kSx" secondAttribute="bottom" id="Z5T-qZ-1dX"/>
+                <constraint firstItem="i08-vF-kSx" firstAttribute="leading" secondItem="7hZ-1M-ldB" secondAttribute="leading" id="xNI-qV-iAr"/>
+                <constraint firstAttribute="trailing" secondItem="i08-vF-kSx" secondAttribute="trailing" id="ytC-zW-1Ww"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-17.557251908396946" y="-264.78873239436621"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
