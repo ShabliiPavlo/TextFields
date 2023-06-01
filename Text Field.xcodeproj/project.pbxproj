@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		40B92E972A27E75700FBAE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E962A27E75700FBAE64 /* AppDelegate.swift */; };
 		40B92E992A27E75700FBAE64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E982A27E75700FBAE64 /* SceneDelegate.swift */; };
-		40B92E9B2A27E75700FBAE64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E9A2A27E75700FBAE64 /* ViewController.swift */; };
+		40B92E9B2A27E75700FBAE64 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E9A2A27E75700FBAE64 /* TextFieldsViewController.swift */; };
 		40B92E9E2A27E75700FBAE64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B92E9C2A27E75700FBAE64 /* Main.storyboard */; };
 		40B92EA02A27E75900FBAE64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B92E9F2A27E75900FBAE64 /* Assets.xcassets */; };
 		40B92EA32A27E75900FBAE64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B92EA12A27E75900FBAE64 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		40B92E932A27E75700FBAE64 /* Text Field.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Field.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B92E962A27E75700FBAE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40B92E982A27E75700FBAE64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		40B92E9A2A27E75700FBAE64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40B92E9A2A27E75700FBAE64 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
 		40B92E9D2A27E75700FBAE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40B92E9F2A27E75900FBAE64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40B92EA22A27E75900FBAE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,13 +58,37 @@
 			children = (
 				40B92E962A27E75700FBAE64 /* AppDelegate.swift */,
 				40B92E982A27E75700FBAE64 /* SceneDelegate.swift */,
-				40B92E9A2A27E75700FBAE64 /* ViewController.swift */,
-				40B92E9C2A27E75700FBAE64 /* Main.storyboard */,
+				40B92EAA2A292BCF00FBAE64 /* Model */,
+				40B92EAB2A292BDB00FBAE64 /* View */,
+				40B92EAC2A292BE200FBAE64 /* Controller */,
 				40B92E9F2A27E75900FBAE64 /* Assets.xcassets */,
 				40B92EA12A27E75900FBAE64 /* LaunchScreen.storyboard */,
 				40B92EA42A27E75900FBAE64 /* Info.plist */,
 			);
 			path = "Text Field";
+			sourceTree = "<group>";
+		};
+		40B92EAA2A292BCF00FBAE64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40B92EAB2A292BDB00FBAE64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40B92E9C2A27E75700FBAE64 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40B92EAC2A292BE200FBAE64 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40B92E9A2A27E75700FBAE64 /* TextFieldsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B92E9B2A27E75700FBAE64 /* ViewController.swift in Sources */,
+				40B92E9B2A27E75700FBAE64 /* TextFieldsViewController.swift in Sources */,
 				40B92E972A27E75700FBAE64 /* AppDelegate.swift in Sources */,
 				40B92E992A27E75700FBAE64 /* SceneDelegate.swift in Sources */,
 			);
