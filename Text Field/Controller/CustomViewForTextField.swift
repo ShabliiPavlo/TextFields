@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CustomTextField: UIView {
+class CustomViewForTextField: UIView {
 
     @IBOutlet var custonView: UIView!
     
-    @IBOutlet weak var textFields: UITextField!
+    @IBOutlet weak var allTextFields: UITextField!
     
     override init(frame: CGRect) {
             super.init(frame: frame)
@@ -23,7 +23,7 @@ class CustomTextField: UIView {
             commonInit()
         }
     func commonInit() {
-            Bundle.main.loadNibNamed("CustomTextField", owner: self, options: nil)
+            Bundle.main.loadNibNamed("CustomViewForTextField", owner: self, options: nil)
         custonView.fixInView(self)
         }
 }
