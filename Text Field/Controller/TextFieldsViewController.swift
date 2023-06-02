@@ -14,29 +14,30 @@ class TextFieldsViewController: UIViewController {
     @IBOutlet weak var countOfInputLimit: UILabel!
     
     let characterLimit = 10
+    var inputLimitCharacterCountUpdater: CharacterCountUpdater?
     override func viewDidLoad() {
         super.viewDidLoad()
         noDigitsTextField.allTextFields.delegate = self
         inputLimitTextField.allTextFields.delegate = self
+        
+        inputLimitCharacterCountUpdater = CharacterCountUpdater(
+            characterLimit: characterLimit,
+            countLabel: countOfInputLimit,
+            textField: inputLimitTextField.allTextFields
+        )
         updateCharacterCount()
     }
     
     func updateCharacterCount() {
-        let count = inputLimitTextField.allTextFields.text?.count ?? 0
-        let remainingCount = characterLimit - count
-        
-        countOfInputLimit.text = String(remainingCount) + "/10"
-        
-        inputLimitTextField.allTextFields.layer.borderWidth = remainingCount <= 0 ? 1.0 : 0.0
-        inputLimitTextField.allTextFields.layer.borderColor = remainingCount <= 0 ? UIColor.red.cgColor : UIColor.black.cgColor
+        inputLimitCharacterCountUpdater?.update()
     }
     
 }
 
 extension TextFieldsViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-       
-// Logik for noDigitsTextField
+        
+        // Logik for noDigitsTextField
         if textField == noDigitsTextField.allTextFields {
             let characterSet = CharacterSet.decimalDigits
             
@@ -45,7 +46,7 @@ extension TextFieldsViewController: UITextFieldDelegate {
                     return false
                 }
             }
-// Logik for inputLimitTextField
+            // Logik for inputLimitTextField
         } else if textField == inputLimitTextField.allTextFields {
             guard let text = textField.text else {
                 return true
