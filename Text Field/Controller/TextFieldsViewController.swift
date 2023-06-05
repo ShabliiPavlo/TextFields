@@ -13,17 +13,18 @@ class TextFieldsViewController: UIViewController {
     @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
     @IBOutlet weak var countOfInputLimit: UILabel!
     
-    let characterLimit = 10
+    let characterLimit = 11
     var inputLimitCharacterCountUpdater: CharacterCountUpdater?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        noDigitsTextField.allTextFields.delegate = self
-        inputLimitTextField.allTextFields.delegate = self
+        noDigitsTextField.textField.delegate = self
+        inputLimitTextField.textField.delegate = self
         
         inputLimitCharacterCountUpdater = CharacterCountUpdater(
             characterLimit: characterLimit,
             countLabel: countOfInputLimit,
-            textField: inputLimitTextField.allTextFields
+            textField: inputLimitTextField.textField
         )
         updateCharacterCount()
     }
@@ -38,7 +39,7 @@ extension TextFieldsViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         // Logik for noDigitsTextField
-        if textField == noDigitsTextField.allTextFields {
+        if textField == noDigitsTextField.textField {
             let characterSet = CharacterSet.decimalDigits
             
             for scalar in string.unicodeScalars {
@@ -47,7 +48,7 @@ extension TextFieldsViewController: UITextFieldDelegate {
                 }
             }
             // Logik for inputLimitTextField
-        } else if textField == inputLimitTextField.allTextFields {
+        } else if textField == inputLimitTextField.textField {
             guard let text = textField.text else {
                 return true
             }
@@ -60,7 +61,7 @@ extension TextFieldsViewController: UITextFieldDelegate {
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField == inputLimitTextField.allTextFields {
+        if textField == inputLimitTextField.textField {
             updateCharacterCount()
         }
     }

@@ -20,11 +20,17 @@ class CharacterCountUpdater {
     
     func update() {
         let count = textField.text?.count ?? 0
-        let remainingCount = characterLimit - count
+        let remainingCount = characterLimit - count - 1
         
-        countLabel.text = "\(remainingCount)/\(characterLimit)"
+        countLabel.text = "\(remainingCount)/10"
         
-        textField.layer.borderWidth = remainingCount <= 0 ? 1.0 : 0.0
-        textField.layer.borderColor = remainingCount <= 0 ? UIColor.red.cgColor : UIColor.black.cgColor
+        textField.layer.borderWidth = remainingCount < 0 ? 1.0 : 0.0
+        textField.layer.borderColor = remainingCount < 0 ? UIColor.red.cgColor : UIColor.black.cgColor
+        
+        guard remainingCount > -1 else {
+            textField.textColor = .red
+            return
+        }
+        textField.textColor = .black
     }
 }

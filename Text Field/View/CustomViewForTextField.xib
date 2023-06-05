@@ -10,8 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomViewForTextField">
             <connections>
-                <outlet property="allTextFields" destination="kcE-4f-nte" id="Bs9-un-nyI"/>
-                <outlet property="custonView" destination="iN0-l3-epB" id="TaE-Vi-USf"/>
+                <outlet property="customView" destination="iN0-l3-epB" id="TaE-Vi-USf"/>
+                <outlet property="textField" destination="kcE-4f-nte" id="Bs9-un-nyI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
