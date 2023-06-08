@@ -141,7 +141,7 @@
                     <connections>
                         <outlet property="countOfInputLimit" destination="Hm5-fw-IYG" id="py7-pX-Kdt"/>
                         <outlet property="inputLimitTextField" destination="XdM-oe-88d" id="zwo-db-3Jx"/>
-                        <outlet property="noDigitsTextField" destination="0Xn-vo-FCT" id="8py-rx-APQ"/>
+                        <outlet property="noDigitsTextField" destination="0Xn-vo-FCT" id="Qrn-OB-Jgr"/>
                         <outlet property="onlyCharactersTextField" destination="GPe-Q8-fQX" id="2RD-Mm-XU2"/>
                     </connections>
                 </viewController>

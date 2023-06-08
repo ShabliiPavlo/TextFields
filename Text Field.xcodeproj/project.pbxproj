@@ -16,6 +16,8 @@
 		40B92EB22A293C2A00FBAE64 /* CustomViewForTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92EB12A293C2A00FBAE64 /* CustomViewForTextField.swift */; };
 		40B92EB42A293C5800FBAE64 /* CustomViewForTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B92EB32A293C5800FBAE64 /* CustomViewForTextField.xib */; };
 		40B92EBA2A2A0A1A00FBAE64 /* CharacterCountUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92EB92A2A0A1A00FBAE64 /* CharacterCountUpdater.swift */; };
+		40E2E1C82A2F864800BB0342 /* NoDigitsTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2E1C72A2F864800BB0342 /* NoDigitsTextFieldView.swift */; };
+		40E2E1CC2A321EEB00BB0342 /* OnlyCharactersTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2E1CB2A321EEB00BB0342 /* OnlyCharactersTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		40B92EB12A293C2A00FBAE64 /* CustomViewForTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewForTextField.swift; sourceTree = "<group>"; };
 		40B92EB32A293C5800FBAE64 /* CustomViewForTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewForTextField.xib; sourceTree = "<group>"; };
 		40B92EB92A2A0A1A00FBAE64 /* CharacterCountUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCountUpdater.swift; sourceTree = "<group>"; };
+		40E2E1C72A2F864800BB0342 /* NoDigitsTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitsTextFieldView.swift; sourceTree = "<group>"; };
+		40E2E1CB2A321EEB00BB0342 /* OnlyCharactersTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharactersTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				40B92EB92A2A0A1A00FBAE64 /* CharacterCountUpdater.swift */,
+				40E2E1C72A2F864800BB0342 /* NoDigitsTextFieldView.swift */,
+				40E2E1CB2A321EEB00BB0342 /* OnlyCharactersTextFieldDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,10 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B92EB22A293C2A00FBAE64 /* CustomViewForTextField.swift in Sources */,
+				40E2E1C82A2F864800BB0342 /* NoDigitsTextFieldView.swift in Sources */,
 				40B92E9B2A27E75700FBAE64 /* TextFieldsViewController.swift in Sources */,
 				40B92E972A27E75700FBAE64 /* AppDelegate.swift in Sources */,
 				40B92EBA2A2A0A1A00FBAE64 /* CharacterCountUpdater.swift in Sources */,
 				40B92E992A27E75700FBAE64 /* SceneDelegate.swift in Sources */,
+				40E2E1CC2A321EEB00BB0342 /* OnlyCharactersTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

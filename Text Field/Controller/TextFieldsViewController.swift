@@ -9,19 +9,24 @@ import UIKit
 
 class TextFieldsViewController: UIViewController {
     
-    @IBOutlet weak var noDigitsTextField: CustomViewForTextField!
+    @IBOutlet weak var noDigitsTextField: NoDigitsTextFieldDelegate!
     @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
-    @IBOutlet weak var onlyCharactersTextField: CustomViewForTextField!
+    @IBOutlet weak var onlyCharactersTextField: OnlyCharactersTextFieldDelegate!
     @IBOutlet weak var countOfInputLimit: UILabel!
     
-    let characterLimit = 11
+  private  let placeholderForOnlyCharactersTextField = "text-numbers"
+  private  let characterLimit = 11
     var inputLimitCharacterCountUpdater: CharacterCountUpdater?
     
+    private let noDigitsTextFieldDelegate = NoDigitsTextFieldDelegate()
+    private let onlyCharactersTextFieldDelegate = OnlyCharactersTextFieldDelegate()
     override func viewDidLoad() {
         super.viewDidLoad()
-        noDigitsTextField.textField.delegate = self
+        onlyCharactersTextField.textField.placeholder = placeholderForOnlyCharactersTextField
+        
+        noDigitsTextField.textField.delegate = noDigitsTextFieldDelegate
         inputLimitTextField.textField.delegate = self
-        onlyCharactersTextField.textField.delegate = self
+        onlyCharactersTextField.textField.delegate = onlyCharactersTextFieldDelegate
         
         inputLimitCharacterCountUpdater = CharacterCountUpdater(
             characterLimit: characterLimit,
@@ -40,18 +45,8 @@ class TextFieldsViewController: UIViewController {
 extension TextFieldsViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-// Logik for noDigitsTextField
-        if textField == noDigitsTextField.textField {
-            let characterSet = CharacterSet.decimalDigits
-            
-            for scalar in string.unicodeScalars {
-                if characterSet.contains(scalar) {
-                    return false
-                }
-            }
-            
-// Logik for inputLimitTextField
-        } else if textField == inputLimitTextField.textField {
+//// Logik for inputLimitTextField
+        if textField == inputLimitTextField.textField {
             guard let text = textField.text else {
                 return true
             }
@@ -59,30 +54,8 @@ extension TextFieldsViewController: UITextFieldDelegate {
             let newLength = text.count + string.count - range.length
             return newLength <= characterLimit
             
-// Logik for onlyCharactersTextField
-        } else if textField == onlyCharactersTextField.textField {
-            let currentText = textField.text ?? ""
-            let replacedText = (currentText as NSString).replacingCharacters(in: range, with: string)
-            
-            if replacedText.count == 1 {
-                return CharacterSet.letters.isSuperset(of: CharacterSet(charactersIn: replacedText))
-            } else {
-                let components = replacedText.components(separatedBy: "-")
-                if components.count == 1 {
-                    let allowedCharacters = CharacterSet.letters.union(CharacterSet(charactersIn: "-"))
-                    let characterSet = CharacterSet(charactersIn: replacedText)
-                    let isOnlyLettersOrDash = allowedCharacters.isSuperset(of: characterSet)
-                    return isOnlyLettersOrDash
-                } else if components.count == 2 {
-                    let digitsCharacterSet = CharacterSet.decimalDigits
-                    let digitsString = components[1]
-                    let isOnlyDigitsAfterDash = digitsCharacterSet.isSuperset(of: CharacterSet(charactersIn: digitsString))
-                    return isOnlyDigitsAfterDash
-                } else {
-                    return !replacedText.contains("-")
-                }
-            }
         }
+
         return true
     }
     
