@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OnlyCharactersTextFieldDelegate:CustomViewForTextField, UITextFieldDelegate {
+class OnlyCharactersTextField:CustomViewForTextField, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
         let replacedText = (currentText as NSString).replacingCharacters(in: range, with: string)

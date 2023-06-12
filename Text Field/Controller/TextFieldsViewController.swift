@@ -9,17 +9,17 @@ import UIKit
 
 class TextFieldsViewController: UIViewController {
     
-    @IBOutlet weak var noDigitsTextField: NoDigitsTextFieldDelegate!
+    @IBOutlet weak var noDigitsTextField: NoDigitsTextField!
     @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
-    @IBOutlet weak var onlyCharactersTextField: OnlyCharactersTextFieldDelegate!
+    @IBOutlet weak var onlyCharactersTextField: OnlyCharactersTextField!
     @IBOutlet weak var countOfInputLimit: UILabel!
     
   private  let placeholderForOnlyCharactersTextField = "text-numbers"
   private  let characterLimit = 11
     var inputLimitCharacterCountUpdater: CharacterCountUpdater?
     
-    private let noDigitsTextFieldDelegate = NoDigitsTextFieldDelegate()
-    private let onlyCharactersTextFieldDelegate = OnlyCharactersTextFieldDelegate()
+    private let noDigitsTextFieldDelegate = NoDigitsTextField()
+    private let onlyCharactersTextFieldDelegate = OnlyCharactersTextField()
     override func viewDidLoad() {
         super.viewDidLoad()
         onlyCharactersTextField.textField.placeholder = placeholderForOnlyCharactersTextField
@@ -50,12 +50,9 @@ extension TextFieldsViewController: UITextFieldDelegate {
             guard let text = textField.text else {
                 return true
             }
-            
             let newLength = text.count + string.count - range.length
             return newLength <= characterLimit
-            
         }
-
         return true
     }
     
