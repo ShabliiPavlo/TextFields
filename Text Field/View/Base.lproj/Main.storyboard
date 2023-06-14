@@ -26,7 +26,7 @@
                                 <rect key="frame" x="16" y="327" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPe-Q8-fQX" customClass="CustomViewForTextField" customModule="Text_Field" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPe-Q8-fQX" customClass="OnlyCharactersTextField" customModule="Text_Field" customModuleProvider="target">
                                 <rect key="frame" x="16" y="415" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
@@ -80,7 +80,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-vo-FCT" customClass="CustomViewForTextField" customModule="Text_Field" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-vo-FCT" customClass="NoDigitsTextField" customModule="Text_Field" customModuleProvider="target">
                                 <rect key="frame" x="16" y="239" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>

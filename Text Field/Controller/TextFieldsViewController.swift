@@ -14,19 +14,15 @@ class TextFieldsViewController: UIViewController {
     @IBOutlet weak var onlyCharactersTextField: OnlyCharactersTextField!
     @IBOutlet weak var countOfInputLimit: UILabel!
     
-  private  let placeholderForOnlyCharactersTextField = "text-numbers"
-  private  let characterLimit = 11
-    var inputLimitCharacterCountUpdater: CharacterCountUpdater?
     
-    private let noDigitsTextFieldDelegate = NoDigitsTextField()
-    private let onlyCharactersTextFieldDelegate = OnlyCharactersTextField()
+    private  let characterLimit = 11
+    private var inputLimitCharacterCountUpdater: CharacterCountUpdater?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        onlyCharactersTextField.textField.placeholder = placeholderForOnlyCharactersTextField
-        
-        noDigitsTextField.textField.delegate = noDigitsTextFieldDelegate
+        noDigitsTextField.commonInit()
         inputLimitTextField.textField.delegate = self
-        onlyCharactersTextField.textField.delegate = onlyCharactersTextFieldDelegate
+        onlyCharactersTextField.commonInit()
         
         inputLimitCharacterCountUpdater = CharacterCountUpdater(
             characterLimit: characterLimit,
@@ -45,7 +41,7 @@ class TextFieldsViewController: UIViewController {
 extension TextFieldsViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-//// Logik for inputLimitTextField
+        //// Logik for inputLimitTextField
         if textField == inputLimitTextField.textField {
             guard let text = textField.text else {
                 return true

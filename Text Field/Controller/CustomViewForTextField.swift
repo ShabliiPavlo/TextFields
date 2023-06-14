@@ -26,6 +26,11 @@ class CustomViewForTextField: UIView {
             Bundle.main.loadNibNamed("CustomViewForTextField", owner: self, options: nil)
         customView.fixInView(self)
         }
+    
+}
+
+extension CustomViewForTextField: UITextFieldDelegate {
+    
 }
 
 extension UIView

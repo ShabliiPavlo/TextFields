@@ -7,7 +7,10 @@
 
 import UIKit
 
-class OnlyCharactersTextField:CustomViewForTextField, UITextFieldDelegate {
+class OnlyCharactersTextField:CustomViewForTextField {
+    
+    private  let placeholderForOnlyCharactersTextField = "text-numbers"
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
         let replacedText = (currentText as NSString).replacingCharacters(in: range, with: string)
@@ -30,5 +33,11 @@ class OnlyCharactersTextField:CustomViewForTextField, UITextFieldDelegate {
                 return !replacedText.contains("-")
             }
         }
+    }
+    
+    override func commonInit() {
+        super.commonInit()
+        textField.delegate = self
+        textField.placeholder = placeholderForOnlyCharactersTextField
     }
 }
