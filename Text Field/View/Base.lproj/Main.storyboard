@@ -30,7 +30,7 @@
                                 <rect key="frame" x="16" y="415" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caT-wc-VeJ" customClass="CustomViewForTextField" customModule="Text_Field" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caT-wc-VeJ" customClass="LinkTextField" customModule="Text_Field" customModuleProvider="target">
                                 <rect key="frame" x="16" y="503" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
@@ -139,6 +139,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="LinkTextField" destination="caT-wc-VeJ" id="dRo-oK-s4G"/>
                         <outlet property="countOfInputLimit" destination="Hm5-fw-IYG" id="py7-pX-Kdt"/>
                         <outlet property="inputLimitTextField" destination="XdM-oe-88d" id="zwo-db-3Jx"/>
                         <outlet property="noDigitsTextField" destination="0Xn-vo-FCT" id="Qrn-OB-Jgr"/>

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import SafariServices
 
-class TextFieldsViewController: UIViewController {
+class TextFieldsViewController: UIViewController, OpenLinkDelegate {
     
     @IBOutlet weak var noDigitsTextField: NoDigitsTextField!
     @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
     @IBOutlet weak var onlyCharactersTextField: OnlyCharactersTextField!
+    @IBOutlet weak var linkTextField: LinkTextField!
     @IBOutlet weak var countOfInputLimit: UILabel!
     
     
@@ -20,9 +22,10 @@ class TextFieldsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        noDigitsTextField.commonInit()
+        noDigitsTextField.delegate = self
         inputLimitTextField.textField.delegate = self
-        onlyCharactersTextField.commonInit()
+        onlyCharactersTextField.delegate = self
+        linkTextField.delegate = self
         
         inputLimitCharacterCountUpdater = CharacterCountUpdater(
             characterLimit: characterLimit,
@@ -32,8 +35,13 @@ class TextFieldsViewController: UIViewController {
         updateCharacterCount()
     }
     
-    func updateCharacterCount() {
+   private func updateCharacterCount() {
         inputLimitCharacterCountUpdater?.update()
+    }
+    
+    func openLink(_ link: URL) {
+        let safariViewController = SFSafariViewController(url: link)
+        present(safariViewController, animated: true, completion: nil)
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		408052472A3B52A90076B72F /* LinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408052462A3B52A90076B72F /* LinkTextField.swift */; };
 		40B92E972A27E75700FBAE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E962A27E75700FBAE64 /* AppDelegate.swift */; };
 		40B92E992A27E75700FBAE64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E982A27E75700FBAE64 /* SceneDelegate.swift */; };
 		40B92E9B2A27E75700FBAE64 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E9A2A27E75700FBAE64 /* TextFieldsViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		408052462A3B52A90076B72F /* LinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTextField.swift; sourceTree = "<group>"; };
 		40B92E932A27E75700FBAE64 /* Text Field.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Field.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B92E962A27E75700FBAE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40B92E982A27E75700FBAE64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				40B92EB92A2A0A1A00FBAE64 /* CharacterCountUpdater.swift */,
 				40E2E1C72A2F864800BB0342 /* NoDigitsTextFieldView.swift */,
 				40E2E1CB2A321EEB00BB0342 /* OnlyCharactersTextField.swift */,
+				408052462A3B52A90076B72F /* LinkTextField.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				40B92E9B2A27E75700FBAE64 /* TextFieldsViewController.swift in Sources */,
 				40B92E972A27E75700FBAE64 /* AppDelegate.swift in Sources */,
 				40B92EBA2A2A0A1A00FBAE64 /* CharacterCountUpdater.swift in Sources */,
+				408052472A3B52A90076B72F /* LinkTextField.swift in Sources */,
 				40B92E992A27E75700FBAE64 /* SceneDelegate.swift in Sources */,
 				40E2E1CC2A321EEB00BB0342 /* OnlyCharactersTextField.swift in Sources */,
 			);

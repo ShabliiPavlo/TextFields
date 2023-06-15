@@ -29,10 +29,6 @@ class CustomViewForTextField: UIView {
     
 }
 
-extension CustomViewForTextField: UITextFieldDelegate {
-    
-}
-
 extension UIView
 {
     func fixInView(_ container: UIView!) -> Void{
