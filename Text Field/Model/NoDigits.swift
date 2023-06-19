@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NoDigitsTextField: CustomViewForTextField, UITextFieldDelegate {
+class NoDigits: CustomViewForTextField, UITextFieldDelegate {
     
     var delegate: UITextFieldDelegate?
     

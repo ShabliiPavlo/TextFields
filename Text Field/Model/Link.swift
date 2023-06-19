@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class LinkTextField:CustomViewForTextField, UITextFieldDelegate {
+class Link: CustomViewForTextField, UITextFieldDelegate {
     
     private var linkTimer: Timer?
     var delegate: OpenLinkDelegate?

@@ -10,22 +10,26 @@ import SafariServices
 
 class TextFieldsViewController: UIViewController, OpenLinkDelegate {
     
-    @IBOutlet weak var noDigitsTextField: NoDigitsTextField!
+    @IBOutlet weak var noDigitsTextField: NoDigits!
     @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
-    @IBOutlet weak var onlyCharactersTextField: OnlyCharactersTextField!
-    @IBOutlet weak var linkTextField: LinkTextField!
+    @IBOutlet weak var onlyCharactersTextField: OnlyCharacters!
+    @IBOutlet weak var linkTextField: Link!
+    @IBOutlet weak var validatePasswordTextField: ValidationRules!
     @IBOutlet weak var countOfInputLimit: UILabel!
-    
     
     private  let characterLimit = 11
     private var inputLimitCharacterCountUpdater: CharacterCountUpdater?
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         noDigitsTextField.delegate = self
         inputLimitTextField.textField.delegate = self
         onlyCharactersTextField.delegate = self
         linkTextField.delegate = self
+        validatePasswordTextField.delegate = self
+    
+        addKeyboardHideOnTappedAroundRecognizer()
         
         inputLimitCharacterCountUpdater = CharacterCountUpdater(
             characterLimit: characterLimit,
@@ -67,9 +71,21 @@ extension TextFieldsViewController: UITextFieldDelegate {
     }
 }
 
+extension UIViewController {
+    func addKeyboardHideOnTappedAroundRecognizer(cancelsTouchesInView: Bool = true) {
+        let endEditingTapRecognizer = UITapGestureRecognizer(
+            target: view,
+            action: #selector(UIView.endEditing)
+        )
+        endEditingTapRecognizer.cancelsTouchesInView = cancelsTouchesInView
+        view.addGestureRecognizer(endEditingTapRecognizer)
+    }
+}
+
 //@IBOutlet weak var noDigitsTextField: UITextField!
 //@IBOutlet weak var inputLimitTextField: UITextField!
 //@IBOutlet weak var onlyCharactersTextField: UITextField!
 //@IBOutlet weak var linkTextField: UITextField!
 //@IBOutlet weak var validationRulesTextField: UITextField!
+
 

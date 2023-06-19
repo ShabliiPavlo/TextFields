@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OnlyCharactersTextField:CustomViewForTextField, UITextFieldDelegate {
+class OnlyCharacters: CustomViewForTextField, UITextFieldDelegate {
     
     private  let placeholderForOnlyCharactersTextField = "text-numbers"
     var delegate: UITextFieldDelegate?
