@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class TextFieldsViewController: UIViewController, OpenLinkDelegate {
+class TextFieldsViewController: UIViewController, OpenLinkDelegate, ValidateRulseDelegate {
     
     @IBOutlet weak var noDigitsTextField: NoDigits!
     @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
@@ -16,19 +16,16 @@ class TextFieldsViewController: UIViewController, OpenLinkDelegate {
     @IBOutlet weak var linkTextField: Link!
     @IBOutlet weak var validatePasswordTextField: ValidationRules!
     @IBOutlet weak var countOfInputLimit: UILabel!
+    @IBOutlet weak var validateIndikator: CustomIndicatorViewController!
     
     private  let characterLimit = 11
     private var inputLimitCharacterCountUpdater: CharacterCountUpdater?
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        noDigitsTextField.delegate = self
         inputLimitTextField.textField.delegate = self
-        onlyCharactersTextField.delegate = self
         linkTextField.delegate = self
         validatePasswordTextField.delegate = self
-    
         addKeyboardHideOnTappedAroundRecognizer()
         
         inputLimitCharacterCountUpdater = CharacterCountUpdater(
@@ -37,9 +34,10 @@ class TextFieldsViewController: UIViewController, OpenLinkDelegate {
             textField: inputLimitTextField.textField
         )
         updateCharacterCount()
+        
     }
     
-   private func updateCharacterCount() {
+    private func updateCharacterCount() {
         inputLimitCharacterCountUpdater?.update()
     }
     
@@ -48,6 +46,18 @@ class TextFieldsViewController: UIViewController, OpenLinkDelegate {
         present(safariViewController, animated: true, completion: nil)
     }
     
+    func chekValidationMinCharacters(_ validation: Bool) {
+        validateIndikator.setMinCharacters(correct: validation)
+    }
+    func chekValidationContainsDigit(_ validation: Bool) {
+        validateIndikator.setMinDigit(correct: validation)
+    }
+    func chekValidationLowercase(_ validation: Bool) {
+        validateIndikator.setMinLowercase(correct: validation)
+    }
+    func chekValidationUpercase(_ validation: Bool) {
+        validateIndikator.setMinCapital(correct: validation)
+    }
 }
 
 extension TextFieldsViewController: UITextFieldDelegate {
@@ -82,10 +92,5 @@ extension UIViewController {
     }
 }
 
-//@IBOutlet weak var noDigitsTextField: UITextField!
-//@IBOutlet weak var inputLimitTextField: UITextField!
-//@IBOutlet weak var onlyCharactersTextField: UITextField!
-//@IBOutlet weak var linkTextField: UITextField!
-//@IBOutlet weak var validationRulesTextField: UITextField!
 
 

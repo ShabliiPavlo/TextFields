@@ -10,7 +10,6 @@ import UIKit
 class OnlyCharacters: CustomViewForTextField, UITextFieldDelegate {
     
     private  let placeholderForOnlyCharactersTextField = "text-numbers"
-    var delegate: UITextFieldDelegate?
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""

@@ -139,6 +139,7 @@
                         <outlet property="inputLimitTextField" destination="XdM-oe-88d" id="zwo-db-3Jx"/>
                         <outlet property="noDigitsTextField" destination="0Xn-vo-FCT" id="Qrn-OB-Jgr"/>
                         <outlet property="onlyCharactersTextField" destination="GPe-Q8-fQX" id="2RD-Mm-XU2"/>
+                        <outlet property="validateIndikator" destination="dgW-5g-wKw" id="FYw-Gj-uLg"/>
                         <outlet property="validatePasswordTextField" destination="y41-bR-Ucq" id="fam-zt-EVo"/>
                     </connections>
                 </viewController>

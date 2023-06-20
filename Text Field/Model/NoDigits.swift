@@ -9,8 +9,6 @@ import UIKit
 
 class NoDigits: CustomViewForTextField, UITextFieldDelegate {
     
-    var delegate: UITextFieldDelegate?
-    
     // Var 4
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return string.filter { $0.isNumber }.isEmpty

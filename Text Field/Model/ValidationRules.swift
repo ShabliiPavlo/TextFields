@@ -9,50 +9,52 @@ import UIKit
 
 class ValidationRules: CustomViewForTextField, UITextFieldDelegate {
     
-    var delegate: UITextFieldDelegate?
+    var delegate: ValidateRulseDelegate?
     
-    func isPasswordValid(_ password: String) -> Bool {
-        // Chek count passwor
-        if password.count < 8 {
-            return false
-        }
+    private func validatePassword(_ password: String) {
         
-        // Chek number in password
-        let digitPredicate = NSPredicate(format: "SELF MATCHES %@", ".*[0-9].*")
-        if !digitPredicate.evaluate(with: password) {
-            return false
-        }
-        
-        // Chek lowercase in pasword
-        let lowercasePredicate = NSPredicate(format: "SELF MATCHES %@", ".*[a-z].*")
-        if !lowercasePredicate.evaluate(with: password) {
-            return false
-        }
-        
-        // Chek uppercase in password
-        let uppercasePredicate = NSPredicate(format: "SELF MATCHES %@", ".*[A-Z].*")
-        if !uppercasePredicate.evaluate(with: password) {
-            return false
-        }
-        
-        return true
-    }
-    
-    func validatePassword(_ password: String) {
-        if isPasswordValid(password) {
-                // Password is valid
-            print("Yes")
-            } else {
-                // Password is invalid
-                print("No")
+        func chekCountOfCharacters() -> Bool {
+            if password.count < 8 {
+                return false
             }
-    }
+            return true
+        }
+        
+        func chekNumber() -> Bool {
+            let digitPredicate = NSPredicate(format: "SELF MATCHES %@", ".*[0-9].*")
+                if !digitPredicate.evaluate(with: password) {
+                    return false
+                }
+            return true
+        }
+        
+        func chekLowercase() -> Bool {
+                let lowercasePredicate = NSPredicate(format: "SELF MATCHES %@", ".*[a-z].*")
+                if !lowercasePredicate.evaluate(with: password) {
+                    return false
+                }
+            return true
+        }
+        
+        func chekUpercase() -> Bool {
+            let uppercasePredicate = NSPredicate(format: "SELF MATCHES %@", ".*[A-Z].*")
+                if !uppercasePredicate.evaluate(with: password) {
+                    return false
+                }
+            return true
+        }
+
+        delegate?.chekValidationMinCharacters(chekCountOfCharacters())
+        delegate?.chekValidationContainsDigit(chekNumber())
+        delegate?.chekValidationLowercase(chekLowercase())
+        delegate?.chekValidationUpercase(chekUpercase())
+       }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if let password = textField.text {
-               validatePassword(password)
-           }
-    }
+            if let password = textField.text {
+                validatePassword(password)
+            }
+        }
     
     override func commonInit() {
         super.commonInit()
@@ -60,4 +62,10 @@ class ValidationRules: CustomViewForTextField, UITextFieldDelegate {
     }
 }
 
+protocol ValidateRulseDelegate {
+    func chekValidationMinCharacters(_ validation:Bool)
+    func chekValidationContainsDigit(_ validation:Bool)
+    func chekValidationLowercase(_ validation:Bool)
+    func chekValidationUpercase(_ validation:Bool)
+}
 
