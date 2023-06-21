@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class TextFieldsViewController: UIViewController, OpenLinkDelegate, ValidateRulseDelegate {
+class TextFieldsViewController: UIViewController {
     
     @IBOutlet weak var noDigitsTextField: NoDigitsView!
     @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
@@ -74,7 +74,7 @@ extension UIViewController {
     }
 }
 
-extension TextFieldsViewController {
+extension TextFieldsViewController: OpenLinkDelegate, ValidateRulseDelegate {
     
     func openLink(_ link: URL) {
         let safariViewController = SFSafariViewController(url: link)
