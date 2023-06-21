@@ -26,11 +26,11 @@
                                 <rect key="frame" x="16" y="327" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPe-Q8-fQX" customClass="OnlyCharacters" customModule="Text_Field" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPe-Q8-fQX" customClass="OnlyCharactersView" customModule="Text_Field" customModuleProvider="target">
                                 <rect key="frame" x="16" y="415" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caT-wc-VeJ" customClass="Link" customModule="Text_Field" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caT-wc-VeJ" customClass="LinkView" customModule="Text_Field" customModuleProvider="target">
                                 <rect key="frame" x="16" y="503" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
@@ -70,16 +70,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-vo-FCT" customClass="NoDigits" customModule="Text_Field" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-vo-FCT" customClass="NoDigitsView" customModule="Text_Field" customModuleProvider="target">
                                 <rect key="frame" x="16" y="239" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y41-bR-Ucq" customClass="ValidationRules" customModule="Text_Field" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y41-bR-Ucq" customClass="ValidationRulesView" customModule="Text_Field" customModuleProvider="target">
                                 <rect key="frame" x="16" y="591" width="361" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgW-5g-wKw" customClass="CustomIndicatorViewController" customModule="Text_Field" customModuleProvider="target">
-                                <rect key="frame" x="16" y="633" width="138" height="88"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgW-5g-wKw" customClass="CustomIndicatorView" customModule="Text_Field" customModuleProvider="target">
+                                <rect key="frame" x="16" y="633" width="199" height="88"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -88,7 +88,7 @@
                         <constraints>
                             <constraint firstItem="XdM-oe-88d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1OK-33-ALj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="caT-wc-VeJ" secondAttribute="trailing" constant="16" id="2Ma-tS-64Q"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dgW-5g-wKw" secondAttribute="trailing" constant="239" id="3Gt-YU-Bi0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dgW-5g-wKw" secondAttribute="trailing" constant="178" id="3Gt-YU-Bi0"/>
                             <constraint firstItem="DxK-jX-SU1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3Ke-e4-t9Y"/>
                             <constraint firstItem="caT-wc-VeJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7BK-3C-tsX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dgW-VF-Zni" secondAttribute="trailing" symbolic="YES" id="AsI-dp-n9O"/>

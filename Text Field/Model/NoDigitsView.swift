@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NoDigits: CustomViewForTextField, UITextFieldDelegate {
+class NoDigitsView: CustomViewForTextField, UITextFieldDelegate {
     
     // Var 4
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

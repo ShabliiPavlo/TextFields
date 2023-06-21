@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomIndicatorViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomIndicatorView">
             <connections>
                 <outlet property="indicatorCustomView" destination="iN0-l3-epB" id="doc-ft-AeV"/>
                 <outlet property="minCapital" destination="izx-JT-CXf" id="CkS-Wp-hxk"/>
@@ -18,32 +18,32 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="138" height="88"/>
+            <rect key="frame" x="0.0" y="0.0" width="193" height="88"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-14" translatesAutoresizingMaskIntoConstraints="NO" id="g37-Zt-do4">
-                    <rect key="frame" x="0.0" y="0.0" width="138" height="88"/>
+                    <rect key="frame" x="0.0" y="0.0" width="193" height="88"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Min late 8 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mes-sH-YhF">
-                            <rect key="frame" x="0.0" y="0.0" width="138" height="32.666666666666664"/>
+                            <rect key="frame" x="0.0" y="0.0" width="193" height="32.666666666666664"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Min 1 digit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-GH-9My">
-                            <rect key="frame" x="0.0" y="18.666666666666668" width="138" height="32.333333333333329"/>
+                            <rect key="frame" x="0.0" y="18.666666666666668" width="193" height="32.333333333333329"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Min 1 lowercase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KG9-bz-KdF">
-                            <rect key="frame" x="0.0" y="37" width="138" height="32.666666666666657"/>
+                            <rect key="frame" x="0.0" y="37" width="193" height="32.666666666666657"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Min 1 capital require" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izx-JT-CXf">
-                            <rect key="frame" x="0.0" y="55.666666666666657" width="138" height="32.333333333333343"/>
+                            <rect key="frame" x="0.0" y="55.666666666666657" width="193" height="32.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                 <constraint firstAttribute="bottom" secondItem="g37-Zt-do4" secondAttribute="bottom" id="l02-ee-bta"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="20.610687022900763" y="177.81690140845072"/>
+            <point key="canvasLocation" x="61.832061068702288" y="177.46478873239437"/>
         </view>
     </objects>
 </document>

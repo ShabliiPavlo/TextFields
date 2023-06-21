@@ -10,13 +10,13 @@ import SafariServices
 
 class TextFieldsViewController: UIViewController, OpenLinkDelegate, ValidateRulseDelegate {
     
-    @IBOutlet weak var noDigitsTextField: NoDigits!
+    @IBOutlet weak var noDigitsTextField: NoDigitsView!
     @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
-    @IBOutlet weak var onlyCharactersTextField: OnlyCharacters!
-    @IBOutlet weak var linkTextField: Link!
-    @IBOutlet weak var validatePasswordTextField: ValidationRules!
+    @IBOutlet weak var onlyCharactersTextField: OnlyCharactersView!
+    @IBOutlet weak var linkTextField: LinkView!
+    @IBOutlet weak var validatePasswordTextField: ValidationRulesView!
     @IBOutlet weak var countOfInputLimit: UILabel!
-    @IBOutlet weak var validateIndikator: CustomIndicatorViewController!
+    @IBOutlet weak var validateIndikator: CustomIndicatorView!
     
     private  let characterLimit = 11
     private var inputLimitCharacterCountUpdater: CharacterCountUpdater?
@@ -39,24 +39,6 @@ class TextFieldsViewController: UIViewController, OpenLinkDelegate, ValidateRuls
     
     private func updateCharacterCount() {
         inputLimitCharacterCountUpdater?.update()
-    }
-    
-    func openLink(_ link: URL) {
-        let safariViewController = SFSafariViewController(url: link)
-        present(safariViewController, animated: true, completion: nil)
-    }
-    
-    func chekValidationMinCharacters(_ validation: Bool) {
-        validateIndikator.setMinCharacters(correct: validation)
-    }
-    func chekValidationContainsDigit(_ validation: Bool) {
-        validateIndikator.setMinDigit(correct: validation)
-    }
-    func chekValidationLowercase(_ validation: Bool) {
-        validateIndikator.setMinLowercase(correct: validation)
-    }
-    func chekValidationUpercase(_ validation: Bool) {
-        validateIndikator.setMinCapital(correct: validation)
     }
 }
 
@@ -92,5 +74,27 @@ extension UIViewController {
     }
 }
 
-
+extension TextFieldsViewController {
+    
+    func openLink(_ link: URL) {
+        let safariViewController = SFSafariViewController(url: link)
+        present(safariViewController, animated: true, completion: nil)
+    }
+    
+    func chekValidationMinCharacters(_ validation: Bool) {
+        validateIndikator.setMinCharacters(correct: validation)
+    }
+    
+    func chekValidationContainsDigit(_ validation: Bool) {
+        validateIndikator.setMinDigit(correct: validation)
+    }
+    
+    func chekValidationLowercase(_ validation: Bool) {
+        validateIndikator.setMinLowercase(correct: validation)
+    }
+    
+    func chekValidationUpercase(_ validation: Bool) {
+        validateIndikator.setMinCapital(correct: validation)
+    }
+}
 

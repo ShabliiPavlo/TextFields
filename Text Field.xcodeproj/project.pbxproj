@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		407FC6852A3C8AA7009D2E2D /* CustomIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407FC6842A3C8AA6009D2E2D /* CustomIndicatorViewController.xib */; };
-		407FC6872A3CAA64009D2E2D /* ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC6862A3CAA64009D2E2D /* ValidationRules.swift */; };
-		407FC6892A3CAE86009D2E2D /* CustomIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC6882A3CAE86009D2E2D /* CustomIndicatorViewController.swift */; };
-		408052472A3B52A90076B72F /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408052462A3B52A90076B72F /* Link.swift */; };
+		407FC6852A3C8AA7009D2E2D /* CustomIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407FC6842A3C8AA6009D2E2D /* CustomIndicatorView.xib */; };
+		407FC6872A3CAA64009D2E2D /* ValidationRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC6862A3CAA64009D2E2D /* ValidationRulesView.swift */; };
+		407FC6892A3CAE86009D2E2D /* CustomIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC6882A3CAE86009D2E2D /* CustomIndicatorView.swift */; };
+		408052472A3B52A90076B72F /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408052462A3B52A90076B72F /* LinkView.swift */; };
+		40AE6D8C2A437ADC00432DC9 /* ExtantionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AE6D8B2A437ADC00432DC9 /* ExtantionUIView.swift */; };
 		40B92E972A27E75700FBAE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E962A27E75700FBAE64 /* AppDelegate.swift */; };
 		40B92E992A27E75700FBAE64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E982A27E75700FBAE64 /* SceneDelegate.swift */; };
 		40B92E9B2A27E75700FBAE64 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92E9A2A27E75700FBAE64 /* TextFieldsViewController.swift */; };
@@ -20,15 +21,16 @@
 		40B92EB22A293C2A00FBAE64 /* CustomViewForTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92EB12A293C2A00FBAE64 /* CustomViewForTextField.swift */; };
 		40B92EB42A293C5800FBAE64 /* CustomViewForTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B92EB32A293C5800FBAE64 /* CustomViewForTextField.xib */; };
 		40B92EBA2A2A0A1A00FBAE64 /* CharacterCountUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B92EB92A2A0A1A00FBAE64 /* CharacterCountUpdater.swift */; };
-		40E2E1C82A2F864800BB0342 /* NoDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2E1C72A2F864800BB0342 /* NoDigits.swift */; };
-		40E2E1CC2A321EEB00BB0342 /* OnlyCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2E1CB2A321EEB00BB0342 /* OnlyCharacters.swift */; };
+		40E2E1C82A2F864800BB0342 /* NoDigitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2E1C72A2F864800BB0342 /* NoDigitsView.swift */; };
+		40E2E1CC2A321EEB00BB0342 /* OnlyCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2E1CB2A321EEB00BB0342 /* OnlyCharactersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		407FC6842A3C8AA6009D2E2D /* CustomIndicatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomIndicatorViewController.xib; sourceTree = "<group>"; };
-		407FC6862A3CAA64009D2E2D /* ValidationRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRules.swift; sourceTree = "<group>"; };
-		407FC6882A3CAE86009D2E2D /* CustomIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicatorViewController.swift; sourceTree = "<group>"; };
-		408052462A3B52A90076B72F /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		407FC6842A3C8AA6009D2E2D /* CustomIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomIndicatorView.xib; sourceTree = "<group>"; };
+		407FC6862A3CAA64009D2E2D /* ValidationRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRulesView.swift; sourceTree = "<group>"; };
+		407FC6882A3CAE86009D2E2D /* CustomIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicatorView.swift; sourceTree = "<group>"; };
+		408052462A3B52A90076B72F /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
+		40AE6D8B2A437ADC00432DC9 /* ExtantionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtantionUIView.swift; sourceTree = "<group>"; };
 		40B92E932A27E75700FBAE64 /* Text Field.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Field.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B92E962A27E75700FBAE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40B92E982A27E75700FBAE64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,8 +42,8 @@
 		40B92EB12A293C2A00FBAE64 /* CustomViewForTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewForTextField.swift; sourceTree = "<group>"; };
 		40B92EB32A293C5800FBAE64 /* CustomViewForTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewForTextField.xib; sourceTree = "<group>"; };
 		40B92EB92A2A0A1A00FBAE64 /* CharacterCountUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCountUpdater.swift; sourceTree = "<group>"; };
-		40E2E1C72A2F864800BB0342 /* NoDigits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigits.swift; sourceTree = "<group>"; };
-		40E2E1CB2A321EEB00BB0342 /* OnlyCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharacters.swift; sourceTree = "<group>"; };
+		40E2E1C72A2F864800BB0342 /* NoDigitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitsView.swift; sourceTree = "<group>"; };
+		40E2E1CB2A321EEB00BB0342 /* OnlyCharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharactersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				40B92EB92A2A0A1A00FBAE64 /* CharacterCountUpdater.swift */,
-				40E2E1C72A2F864800BB0342 /* NoDigits.swift */,
-				40E2E1CB2A321EEB00BB0342 /* OnlyCharacters.swift */,
-				408052462A3B52A90076B72F /* Link.swift */,
-				407FC6862A3CAA64009D2E2D /* ValidationRules.swift */,
+				40E2E1C72A2F864800BB0342 /* NoDigitsView.swift */,
+				40E2E1CB2A321EEB00BB0342 /* OnlyCharactersView.swift */,
+				408052462A3B52A90076B72F /* LinkView.swift */,
+				407FC6862A3CAA64009D2E2D /* ValidationRulesView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,7 +105,7 @@
 			children = (
 				40B92E9C2A27E75700FBAE64 /* Main.storyboard */,
 				40B92EB32A293C5800FBAE64 /* CustomViewForTextField.xib */,
-				407FC6842A3C8AA6009D2E2D /* CustomIndicatorViewController.xib */,
+				407FC6842A3C8AA6009D2E2D /* CustomIndicatorView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +115,8 @@
 			children = (
 				40B92E9A2A27E75700FBAE64 /* TextFieldsViewController.swift */,
 				40B92EB12A293C2A00FBAE64 /* CustomViewForTextField.swift */,
-				407FC6882A3CAE86009D2E2D /* CustomIndicatorViewController.swift */,
+				407FC6882A3CAE86009D2E2D /* CustomIndicatorView.swift */,
+				40AE6D8B2A437ADC00432DC9 /* ExtantionUIView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,7 +182,7 @@
 				40B92EB42A293C5800FBAE64 /* CustomViewForTextField.xib in Resources */,
 				40B92EA32A27E75900FBAE64 /* LaunchScreen.storyboard in Resources */,
 				40B92EA02A27E75900FBAE64 /* Assets.xcassets in Resources */,
-				407FC6852A3C8AA7009D2E2D /* CustomIndicatorViewController.xib in Resources */,
+				407FC6852A3C8AA7009D2E2D /* CustomIndicatorView.xib in Resources */,
 				40B92E9E2A27E75700FBAE64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,15 +195,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B92EB22A293C2A00FBAE64 /* CustomViewForTextField.swift in Sources */,
-				40E2E1C82A2F864800BB0342 /* NoDigits.swift in Sources */,
+				40E2E1C82A2F864800BB0342 /* NoDigitsView.swift in Sources */,
 				40B92E9B2A27E75700FBAE64 /* TextFieldsViewController.swift in Sources */,
-				407FC6892A3CAE86009D2E2D /* CustomIndicatorViewController.swift in Sources */,
+				407FC6892A3CAE86009D2E2D /* CustomIndicatorView.swift in Sources */,
 				40B92E972A27E75700FBAE64 /* AppDelegate.swift in Sources */,
 				40B92EBA2A2A0A1A00FBAE64 /* CharacterCountUpdater.swift in Sources */,
-				407FC6872A3CAA64009D2E2D /* ValidationRules.swift in Sources */,
-				408052472A3B52A90076B72F /* Link.swift in Sources */,
+				407FC6872A3CAA64009D2E2D /* ValidationRulesView.swift in Sources */,
+				408052472A3B52A90076B72F /* LinkView.swift in Sources */,
 				40B92E992A27E75700FBAE64 /* SceneDelegate.swift in Sources */,
-				40E2E1CC2A321EEB00BB0342 /* OnlyCharacters.swift in Sources */,
+				40AE6D8C2A437ADC00432DC9 /* ExtantionUIView.swift in Sources */,
+				40E2E1CC2A321EEB00BB0342 /* OnlyCharactersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

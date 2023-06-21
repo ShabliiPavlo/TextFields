@@ -8,6 +8,7 @@
 import UIKit
 
 class CharacterCountUpdater {
+    
     private let characterLimit: Int
     private let countLabel: UILabel
     private let textField: UITextField

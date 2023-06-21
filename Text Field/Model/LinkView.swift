@@ -8,7 +8,11 @@
 import UIKit
 import SafariServices
 
-class Link: CustomViewForTextField, UITextFieldDelegate {
+protocol OpenLinkDelegate {
+    func openLink(_ link: URL)
+}
+
+class LinkView: CustomViewForTextField, UITextFieldDelegate {
     
     private var linkTimer: Timer?
     var delegate: OpenLinkDelegate?
@@ -26,8 +30,4 @@ class Link: CustomViewForTextField, UITextFieldDelegate {
         super.commonInit()
         textField.delegate = self
     }
-}
-
-protocol OpenLinkDelegate {
-    func openLink(_ link: URL)
 }

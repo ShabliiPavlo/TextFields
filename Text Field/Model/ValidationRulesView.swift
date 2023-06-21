@@ -7,7 +7,18 @@
 
 import UIKit
 
-class ValidationRules: CustomViewForTextField, UITextFieldDelegate {
+protocol ValidateRulseDelegate {
+    func chekValidationMinCharacters(_ validation:Bool)
+    func chekValidationContainsDigit(_ validation:Bool)
+    func chekValidationLowercase(_ validation:Bool)
+    func chekValidationUpercase(_ validation:Bool)
+}
+
+class ValidationRulesView: CustomViewForTextField, UITextFieldDelegate {
+    
+    private let digitPredicate = NSPredicate(format: "SELF MATCHES %@", ".*[0-9].*")
+    private let lowercasePredicate = NSPredicate(format: "SELF MATCHES %@", ".*[a-z].*")
+    private let uppercasePredicate = NSPredicate(format: "SELF MATCHES %@", ".*[A-Z].*")
     
     var delegate: ValidateRulseDelegate?
     
@@ -21,51 +32,42 @@ class ValidationRules: CustomViewForTextField, UITextFieldDelegate {
         }
         
         func chekNumber() -> Bool {
-            let digitPredicate = NSPredicate(format: "SELF MATCHES %@", ".*[0-9].*")
-                if !digitPredicate.evaluate(with: password) {
-                    return false
-                }
+            if !digitPredicate.evaluate(with: password) {
+                return false
+            }
             return true
         }
         
         func chekLowercase() -> Bool {
-                let lowercasePredicate = NSPredicate(format: "SELF MATCHES %@", ".*[a-z].*")
-                if !lowercasePredicate.evaluate(with: password) {
-                    return false
-                }
+            if !lowercasePredicate.evaluate(with: password) {
+                return false
+            }
             return true
         }
         
         func chekUpercase() -> Bool {
-            let uppercasePredicate = NSPredicate(format: "SELF MATCHES %@", ".*[A-Z].*")
-                if !uppercasePredicate.evaluate(with: password) {
-                    return false
-                }
+            if !uppercasePredicate.evaluate(with: password) {
+                return false
+            }
             return true
         }
-
+        
         delegate?.chekValidationMinCharacters(chekCountOfCharacters())
         delegate?.chekValidationContainsDigit(chekNumber())
         delegate?.chekValidationLowercase(chekLowercase())
         delegate?.chekValidationUpercase(chekUpercase())
-       }
+    }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-            if let password = textField.text {
-                validatePassword(password)
-            }
+        if let password = textField.text {
+            validatePassword(password)
         }
+    }
     
     override func commonInit() {
         super.commonInit()
         textField.delegate = self
+        textField.isSecureTextEntry = true
     }
-}
-
-protocol ValidateRulseDelegate {
-    func chekValidationMinCharacters(_ validation:Bool)
-    func chekValidationContainsDigit(_ validation:Bool)
-    func chekValidationLowercase(_ validation:Bool)
-    func chekValidationUpercase(_ validation:Bool)
 }
 
