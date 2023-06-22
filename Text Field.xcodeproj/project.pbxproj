@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404D7C2B2A44975A00593733 /* Text_FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404D7C2A2A44975A00593733 /* Text_FieldTests.swift */; };
 		407FC6852A3C8AA7009D2E2D /* CustomIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407FC6842A3C8AA6009D2E2D /* CustomIndicatorView.xib */; };
 		407FC6872A3CAA64009D2E2D /* ValidationRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC6862A3CAA64009D2E2D /* ValidationRulesView.swift */; };
 		407FC6892A3CAE86009D2E2D /* CustomIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC6882A3CAE86009D2E2D /* CustomIndicatorView.swift */; };
@@ -25,7 +26,19 @@
 		40E2E1CC2A321EEB00BB0342 /* OnlyCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2E1CB2A321EEB00BB0342 /* OnlyCharactersView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		404D7C2C2A44975A00593733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40B92E8B2A27E75700FBAE64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40B92E922A27E75700FBAE64;
+			remoteInfo = "Text Field";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		404D7C282A44975A00593733 /* Text FieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		404D7C2A2A44975A00593733 /* Text_FieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldTests.swift; sourceTree = "<group>"; };
 		407FC6842A3C8AA6009D2E2D /* CustomIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomIndicatorView.xib; sourceTree = "<group>"; };
 		407FC6862A3CAA64009D2E2D /* ValidationRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRulesView.swift; sourceTree = "<group>"; };
 		407FC6882A3CAE86009D2E2D /* CustomIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicatorView.swift; sourceTree = "<group>"; };
@@ -47,6 +60,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		404D7C252A44975A00593733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40B92E902A27E75700FBAE64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		404D7C292A44975A00593733 /* Text FieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				404D7C2A2A44975A00593733 /* Text_FieldTests.swift */,
+			);
+			path = "Text FieldTests";
+			sourceTree = "<group>";
+		};
 		40B92E8A2A27E75700FBAE64 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				40B92E932A27E75700FBAE64 /* Text Field.app */,
+				404D7C282A44975A00593733 /* Text FieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +110,7 @@
 				40B92EAA2A292BCF00FBAE64 /* Model */,
 				40B92EAB2A292BDB00FBAE64 /* View */,
 				40B92EAC2A292BE200FBAE64 /* Controller */,
+				404D7C292A44975A00593733 /* Text FieldTests */,
 				40B92E9F2A27E75900FBAE64 /* Assets.xcassets */,
 				40B92EA12A27E75900FBAE64 /* LaunchScreen.storyboard */,
 				40B92EA42A27E75900FBAE64 /* Info.plist */,
@@ -124,6 +154,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		404D7C272A44975A00593733 /* Text FieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 404D7C302A44975A00593733 /* Build configuration list for PBXNativeTarget "Text FieldTests" */;
+			buildPhases = (
+				404D7C242A44975A00593733 /* Sources */,
+				404D7C252A44975A00593733 /* Frameworks */,
+				404D7C262A44975A00593733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				404D7C2D2A44975A00593733 /* PBXTargetDependency */,
+			);
+			name = "Text FieldTests";
+			productName = "Text FieldTests";
+			productReference = 404D7C282A44975A00593733 /* Text FieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		40B92E922A27E75700FBAE64 /* Text Field */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40B92EA72A27E75900FBAE64 /* Build configuration list for PBXNativeTarget "Text Field" */;
@@ -151,6 +199,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					404D7C272A44975A00593733 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 40B92E922A27E75700FBAE64;
+					};
 					40B92E922A27E75700FBAE64 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -170,11 +222,19 @@
 			projectRoot = "";
 			targets = (
 				40B92E922A27E75700FBAE64 /* Text Field */,
+				404D7C272A44975A00593733 /* Text FieldTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		404D7C262A44975A00593733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40B92E912A27E75700FBAE64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +250,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		404D7C242A44975A00593733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404D7C2B2A44975A00593733 /* Text_FieldTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40B92E8F2A27E75700FBAE64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +277,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		404D7C2D2A44975A00593733 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40B92E922A27E75700FBAE64 /* Text Field */;
+			targetProxy = 404D7C2C2A44975A00593733 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		40B92E9C2A27E75700FBAE64 /* Main.storyboard */ = {
@@ -230,6 +306,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		404D7C2E2A44975A00593733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZQ6ZJQYAL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shablii.Text-FieldTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Text Field.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Text Field";
+			};
+			name = Debug;
+		};
+		404D7C2F2A44975A00593733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZQ6ZJQYAL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shablii.Text-FieldTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Text Field.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Text Field";
+			};
+			name = Release;
+		};
 		40B92EA52A27E75900FBAE64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,6 +515,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		404D7C302A44975A00593733 /* Build configuration list for PBXNativeTarget "Text FieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404D7C2E2A44975A00593733 /* Debug */,
+				404D7C2F2A44975A00593733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		40B92E8E2A27E75700FBAE64 /* Build configuration list for PBXProject "Text Field" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
