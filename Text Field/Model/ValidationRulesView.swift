@@ -23,39 +23,10 @@ class ValidationRulesView: CustomViewForTextField, UITextFieldDelegate {
     var delegate: ValidateRulseDelegate?
     
     private func validatePassword(_ password: String) {
-        
-        func chekCountOfCharacters() -> Bool {
-            if password.count < 8 {
-                return false
-            }
-            return true
-        }
-        
-        func chekNumber() -> Bool {
-            if !digitPredicate.evaluate(with: password) {
-                return false
-            }
-            return true
-        }
-        
-        func chekLowercase() -> Bool {
-            if !lowercasePredicate.evaluate(with: password) {
-                return false
-            }
-            return true
-        }
-        
-        func chekUpercase() -> Bool {
-            if !uppercasePredicate.evaluate(with: password) {
-                return false
-            }
-            return true
-        }
-        
-        delegate?.chekValidationMinCharacters(chekCountOfCharacters())
-        delegate?.chekValidationContainsDigit(chekNumber())
-        delegate?.chekValidationLowercase(chekLowercase())
-        delegate?.chekValidationUpercase(chekUpercase())
+        delegate?.chekValidationMinCharacters(chekCountOfCharacters(password))
+        delegate?.chekValidationContainsDigit(chekNumber(password))
+        delegate?.chekValidationLowercase(chekLowercase(password))
+        delegate?.chekValidationUpercase(chekUpercase(password))
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
@@ -71,3 +42,33 @@ class ValidationRulesView: CustomViewForTextField, UITextFieldDelegate {
     }
 }
 
+extension ValidationRulesView {
+    
+    func chekCountOfCharacters(_ password: String) -> Bool {
+        if password.count < 8 {
+            return false
+        }
+        return true
+    }
+    
+    func chekNumber(_ password: String) -> Bool {
+        if !digitPredicate.evaluate(with: password) {
+            return false
+        }
+        return true
+    }
+    
+    func chekLowercase(_ password: String) -> Bool {
+        if !lowercasePredicate.evaluate(with: password) {
+            return false
+        }
+        return true
+    }
+    
+    func chekUpercase(_ password: String) -> Bool {
+        if !uppercasePredicate.evaluate(with: password) {
+            return false
+        }
+        return true
+    }
+}

@@ -100,11 +100,13 @@ final class Text_FieldTests: XCTestCase {
     func testValidationRulesView() throws {
         
         //Test case 1
-        let testPassword = "12345678"
-        if validationRulesView.textField.text == testPassword {
-            let testCase = testPassword.count >= 8 ? true : false
-            XCTAssertTrue(testCase)
-        }
+        let testPasswordCount = "12345678"
+        let testCaseCount =  validationRulesView.chekCountOfCharacters(testPasswordCount)
+        XCTAssertTrue(testCaseCount)
+        
+        //Test case 2
+        let testCaseChekNumber = validationRulesView.chekNumber(testPasswordCount)
+        XCTAssertTrue(testCaseChekNumber)
     }
     
     func testPerformanceExample() throws {
