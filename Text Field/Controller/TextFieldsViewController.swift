@@ -10,11 +10,31 @@ import SafariServices
 
 class TextFieldsViewController: UIViewController {
     
-    @IBOutlet weak var noDigitsTextField: NoDigitsView!
-    @IBOutlet weak var inputLimitTextField: CustomViewForTextField!
-    @IBOutlet weak var onlyCharactersTextField: OnlyCharactersView!
-    @IBOutlet weak var linkTextField: LinkView!
-    @IBOutlet weak var validatePasswordTextField: ValidationRulesView!
+    @IBOutlet weak var noDigitsTextField: NoDigitsView!{
+        didSet {
+            noDigitsTextField.accessibilityIdentifier = "noDigitsText"
+        }
+    }
+    @IBOutlet weak var inputLimitTextField: CustomViewForTextField!{
+        didSet {
+            inputLimitTextField.accessibilityIdentifier = "inputLimitText"
+        }
+    }
+    @IBOutlet weak var onlyCharactersTextField: OnlyCharactersView!{
+        didSet {
+            onlyCharactersTextField.accessibilityIdentifier = "onlyCharactersText"
+        }
+    }
+    @IBOutlet weak var linkTextField: LinkView!{
+        didSet {
+            linkTextField.accessibilityIdentifier = "linkText"
+        }
+    }
+    @IBOutlet weak var validatePasswordTextField: ValidationRulesView!{
+        didSet {
+            validatePasswordTextField.accessibilityIdentifier = "validatePasswordText"
+        }
+    }
     @IBOutlet weak var countOfInputLimit: UILabel!
     @IBOutlet weak var validateIndikator: CustomIndicatorView!
     

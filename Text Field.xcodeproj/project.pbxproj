@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		404D7C2B2A44975A00593733 /* Text_FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404D7C2A2A44975A00593733 /* Text_FieldTests.swift */; };
+		404D7C382A49935700593733 /* Text_FieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404D7C372A49935700593733 /* Text_FieldUITests.swift */; };
+		404D7C3A2A49935800593733 /* Text_FieldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404D7C392A49935800593733 /* Text_FieldUITestsLaunchTests.swift */; };
 		407FC6852A3C8AA7009D2E2D /* CustomIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407FC6842A3C8AA6009D2E2D /* CustomIndicatorView.xib */; };
 		407FC6872A3CAA64009D2E2D /* ValidationRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC6862A3CAA64009D2E2D /* ValidationRulesView.swift */; };
 		407FC6892A3CAE86009D2E2D /* CustomIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC6882A3CAE86009D2E2D /* CustomIndicatorView.swift */; };
@@ -34,11 +36,21 @@
 			remoteGlobalIDString = 40B92E922A27E75700FBAE64;
 			remoteInfo = "Text Field";
 		};
+		404D7C3B2A49935800593733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40B92E8B2A27E75700FBAE64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40B92E922A27E75700FBAE64;
+			remoteInfo = "Text Field";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		404D7C282A44975A00593733 /* Text FieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404D7C2A2A44975A00593733 /* Text_FieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldTests.swift; sourceTree = "<group>"; };
+		404D7C352A49935700593733 /* Text FieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		404D7C372A49935700593733 /* Text_FieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldUITests.swift; sourceTree = "<group>"; };
+		404D7C392A49935800593733 /* Text_FieldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		407FC6842A3C8AA6009D2E2D /* CustomIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomIndicatorView.xib; sourceTree = "<group>"; };
 		407FC6862A3CAA64009D2E2D /* ValidationRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRulesView.swift; sourceTree = "<group>"; };
 		407FC6882A3CAE86009D2E2D /* CustomIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicatorView.swift; sourceTree = "<group>"; };
@@ -67,6 +79,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		404D7C322A49935700593733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40B92E902A27E75700FBAE64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +104,15 @@
 			path = "Text FieldTests";
 			sourceTree = "<group>";
 		};
+		404D7C362A49935700593733 /* Text FieldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				404D7C372A49935700593733 /* Text_FieldUITests.swift */,
+				404D7C392A49935800593733 /* Text_FieldUITestsLaunchTests.swift */,
+			);
+			path = "Text FieldUITests";
+			sourceTree = "<group>";
+		};
 		40B92E8A2A27E75700FBAE64 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +126,7 @@
 			children = (
 				40B92E932A27E75700FBAE64 /* Text Field.app */,
 				404D7C282A44975A00593733 /* Text FieldTests.xctest */,
+				404D7C352A49935700593733 /* Text FieldUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +140,7 @@
 				40B92EAB2A292BDB00FBAE64 /* View */,
 				40B92EAC2A292BE200FBAE64 /* Controller */,
 				404D7C292A44975A00593733 /* Text FieldTests */,
+				404D7C362A49935700593733 /* Text FieldUITests */,
 				40B92E9F2A27E75900FBAE64 /* Assets.xcassets */,
 				40B92EA12A27E75900FBAE64 /* LaunchScreen.storyboard */,
 				40B92EA42A27E75900FBAE64 /* Info.plist */,
@@ -172,6 +202,24 @@
 			productReference = 404D7C282A44975A00593733 /* Text FieldTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		404D7C342A49935700593733 /* Text FieldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 404D7C3F2A49935800593733 /* Build configuration list for PBXNativeTarget "Text FieldUITests" */;
+			buildPhases = (
+				404D7C312A49935700593733 /* Sources */,
+				404D7C322A49935700593733 /* Frameworks */,
+				404D7C332A49935700593733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				404D7C3C2A49935800593733 /* PBXTargetDependency */,
+			);
+			name = "Text FieldUITests";
+			productName = "Text FieldUITests";
+			productReference = 404D7C352A49935700593733 /* Text FieldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		40B92E922A27E75700FBAE64 /* Text Field */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40B92EA72A27E75900FBAE64 /* Build configuration list for PBXNativeTarget "Text Field" */;
@@ -203,6 +251,10 @@
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 40B92E922A27E75700FBAE64;
 					};
+					404D7C342A49935700593733 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 40B92E922A27E75700FBAE64;
+					};
 					40B92E922A27E75700FBAE64 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -223,12 +275,20 @@
 			targets = (
 				40B92E922A27E75700FBAE64 /* Text Field */,
 				404D7C272A44975A00593733 /* Text FieldTests */,
+				404D7C342A49935700593733 /* Text FieldUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		404D7C262A44975A00593733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		404D7C332A49935700593733 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,6 +318,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		404D7C312A49935700593733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404D7C3A2A49935800593733 /* Text_FieldUITestsLaunchTests.swift in Sources */,
+				404D7C382A49935700593733 /* Text_FieldUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40B92E8F2A27E75700FBAE64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +352,11 @@
 			isa = PBXTargetDependency;
 			target = 40B92E922A27E75700FBAE64 /* Text Field */;
 			targetProxy = 404D7C2C2A44975A00593733 /* PBXContainerItemProxy */;
+		};
+		404D7C3C2A49935800593733 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40B92E922A27E75700FBAE64 /* Text Field */;
+			targetProxy = 404D7C3B2A49935800593733 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -339,6 +413,40 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Text Field.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Text Field";
+			};
+			name = Release;
+		};
+		404D7C3D2A49935800593733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZQ6ZJQYAL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shablii.Text-FieldUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Text Field";
+			};
+			name = Debug;
+		};
+		404D7C3E2A49935800593733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZQ6ZJQYAL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shablii.Text-FieldUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Text Field";
 			};
 			name = Release;
 		};
@@ -520,6 +628,15 @@
 			buildConfigurations = (
 				404D7C2E2A44975A00593733 /* Debug */,
 				404D7C2F2A44975A00593733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		404D7C3F2A49935800593733 /* Build configuration list for PBXNativeTarget "Text FieldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404D7C3D2A49935800593733 /* Debug */,
+				404D7C3E2A49935800593733 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

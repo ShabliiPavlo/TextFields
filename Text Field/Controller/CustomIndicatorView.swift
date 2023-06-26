@@ -10,7 +10,11 @@ import UIKit
 class CustomIndicatorView: UIView {
     
     @IBOutlet private var indicatorCustomView: UIView!
-    @IBOutlet private weak var minCharacters: UILabel!
+    @IBOutlet private weak var minCharacters: UILabel!{
+        didSet {
+            minCharacters.accessibilityIdentifier = "minCharacters"
+        }
+    }
     @IBOutlet private weak var minDigit: UILabel!
     @IBOutlet private weak var minLowercase: UILabel!
     @IBOutlet private weak var minCapital: UILabel!
