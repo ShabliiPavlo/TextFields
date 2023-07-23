@@ -1,4 +1,9 @@
 # TextFields
+
+
+![TF](https://github.com/ShabliiPavlo/TextFields/assets/123066255/76ca58fc-c069-4156-b574-f55c41435eae)
+
+
 Create an application with text fields for different needs. 
 
 Required functionality
